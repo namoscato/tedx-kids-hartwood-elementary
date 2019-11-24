@@ -1,0 +1,266 @@
+body,
+html {
+    height: 100%;
+}
+
+body {
+    color: #101010;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+#cover {
+    height: 100%;
+}
+
+#cover-image {
+    background: url('/img/cover-image.jpg') top / cover;
+    bottom: 10.25rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#cover-heading {
+    bottom: 0;
+    margin-top: -10.25rem;
+    position: absolute;
+    top: 100%;
+    width:  100%;
+}
+
+#cover-logo {
+    max-width: 20.9375rem;
+}
+
+#footer {
+    background-color: #101010;
+    color: #fff;
+    display: block;
+    line-height: 1.2;
+    padding: 2rem 3rem;
+    text-align: center;
+}
+
+#footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#footer > p {
+    flex-grow: 1;
+}
+
+#footer .copyright {
+    color: #808080;
+}
+
+.heading {
+    box-sizing: border-box;
+    padding: 1.5rem;
+    overflow-y: hidden;
+}
+
+.heading-title {
+    bottom: -0.36em;
+    color: #ef3624;
+    font-size: 3em;
+    font-weight: 200;
+    position: absolute;
+    right: 1.5rem;
+    text-transform: lowercase;
+    white-space: nowrap;
+}
+
+.heading-title .text-transform-none {
+    text-transform: none;
+}
+
+.heading-title.is-white {
+    color: #fff;
+}
+
+.heading-title.is-submerged {
+    bottom: auto;
+    top: -0.84em;
+}
+
+.content-section {
+    overflow-y: hidden;
+    padding: 5rem 2rem 7rem;
+    position: relative;
+}
+
+.content-section > p {
+    line-height: 2;
+    margin: 2em 0;
+    max-width: 43.75em;
+}
+
+.content-section > p a {
+    border-bottom: 1px solid #ef3624;
+    color: #ef3624;
+    text-decoration: none;
+}
+
+.content-section > p a:hover {
+    border-bottom-color: transparent;
+}
+
+.content-section.is-red {
+    background-color: #ef3624;
+    color: #fff;
+}
+
+.content-title,
+.content-subtitle {
+    font-weight: normal;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.content-title {
+    font-size: 2.5em;
+}
+
+.content-subtitle {
+    font-size: 1.3em;
+}
+
+/* photo grid */
+
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    max-width: 51rem;
+    overflow: auto;
+    padding: 0;
+}
+
+.photo-grid > li {
+    box-sizing: border-box;
+    font-size: 1.2em;
+    padding-bottom: 2rem;
+    text-align: right;
+    width: 100%;
+}
+
+.photo-grid-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.photo-grid-image {
+    display: block;
+    height: auto;
+    margin-bottom: 0.5em;
+    width: 100%;
+}
+
+/* overlay */
+
+body.is-overlay-visible {
+    overflow: hidden;
+}
+
+body.is-overlay-visible #overlay {
+    display: block;
+}
+
+body.is-overlay-visible .content {
+    filter: blur(7px);
+}
+
+#overlay {
+    background-color: rgba(16, 16, 16, 0.75);
+    color: #fff;
+    display: none;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#overlay-content {
+    bottom: 0;
+    max-width: 30rem;
+    padding: 2rem;
+    position: absolute;
+    right: 0;
+    text-align: right;
+}
+
+#overlay-title {
+    font-size: 3em;
+    font-weight: 200;
+    margin-bottom: 0.3em;
+}
+
+#overlay-body {
+    line-height: 2;
+}
+
+@media (min-width: 34rem) {
+    .photo-grid > li {
+        padding-right: 2rem;
+        width: 50%;
+    }
+}
+
+@media (min-width: 40rem) {
+    .heading-title {
+        font-size: 4em;
+    }
+
+    .content-section {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    #overlay-content {
+        padding: 3rem;
+    }
+}
+
+@media (min-width: 50rem) {
+    .heading-title {
+        font-size: 5em;
+    }
+}
+
+@media (min-width: 57rem) {
+    .photo-grid > li {
+        width: auto;
+    }
+
+    .photo-grid-image {
+        width: 15rem;
+    }
+}
+
+@media (min-width: 67.5rem) {
+    #cover-image {
+        bottom: 8.25rem;
+    }
+
+    #cover-heading {
+        margin-top: -8.25rem;
+    }
+}
+
+@media (min-width: 68.75rem) {
+    #footer {
+        display: flex;
+        text-align: left;
+    }
+
+    #footer .copyright {
+        text-align: right;
+    }
+}
