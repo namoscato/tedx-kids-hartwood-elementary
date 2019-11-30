@@ -7,7 +7,7 @@ const uglify = require('gulp-uglify')
 
 const config = {
     css: 'src/css/style.css',
-    dest: 'public',
+    dest: 'static',
     js: 'src/js/*.js'
 }
 
@@ -36,12 +36,13 @@ function jsLint() {
 
 function watch() {
     gulp.watch(config.css, css)
-    gulp.watch(config.js, js)
+    gulp.watch(config.js, gulp.parallel(js, jsLint))
 }
 
 exports.css = css
 exports.js = js
 exports.lint = jsLint
+exports.watch = watch
 
 const all = gulp.parallel(css, js)
 

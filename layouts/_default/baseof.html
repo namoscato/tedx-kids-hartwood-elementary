@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    <meta property="og:title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ site.Title }}">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ee3624">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    {{ block "head" . }}{{ end }}
+
+    {{ $style := resources.Get "style.scss" | resources.ToCSS (dict "targetPath" "style.css" "outputStyle" "compressed") }}
+    <link href="{{ $style.Permalink }}" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17188743-26"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-17188743-26');
+    </script>
+</head>
+<body>
+    {{ block "header" . }}
+    <div class="content content-section is-not-padded">
+        <div class="heading">
+            <a href="/">
+                <img id="cover-logo" alt="TEDxKids@HartwoodElementary Logo" src="/img/logo.jpg" width="100%">
+            </a>
+            <h1 class="heading-title">See Things Differently</h1>
+        </div>
+    </div>
+    <div class="content content-section is-red">
+        <h1 class="heading-title is-white is-submerged">See Things Differently</h1>
+        {{ partial "menu.html" . }}
+        <h1 class="heading-title is-white">{{ .Title }}</h1>
+    </div>
+    {{ end }}
+    {{ block "main" . }}
+    <div class="content content-section">
+        <h1 class="heading-title is-submerged">{{ .Title }}</h1>
+        {{ block "content" . }}
+        {{ .Content }}
+        {{ end }}
+    </div>
+    {{ end }}
+    <div id="footer" class="content">
+        <p>This independent TEDx event is operated under license from TED.</p>
+        <p class="copyright">&copy; 2019 TEDxKids@HartwoodElementary. Site by <a href="https://amoscato.com/" target="_blank">Nick Amoscato</a>.</p>
+    </div>
+</body>
+</html>
