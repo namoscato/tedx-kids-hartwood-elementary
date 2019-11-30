@@ -1,0 +1,12 @@
+baseURL: 'https://www.tedxhartwoodelementary.com/'
+languageCode: 'en-us'
+title: 'TEDxKids@HartwoodElementary: See Things Differently'
+params:
+    description: 'See things differently through the eyes of Hartwood Elementary students on May 31, 2019.'
+sectionPagesMenu: main
+menu:
+    main:
+        - identifier: speakers
+          name: Speakers
+          weight: -100
+          url: /speakers/
