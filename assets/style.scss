@@ -38,15 +38,15 @@ h1, h2, h3 {
 }
 
 #menu {
-    font-size: 2em;
+    font-size: 1.5em;
     list-style-type: none;
     margin: 2rem 0;
     padding: 0;
     text-align: center;
 
     > li {
-        display: inline-block;
-        margin: 0 2rem;
+        display: block;
+        margin: 0 2rem 2rem;
 
         > a {
             color: rgba(255, 255, 255, 0.8);
@@ -201,6 +201,15 @@ h1, h2, h3 {
 }
 
 @media (min-width: 34rem) {
+    #menu {
+        font-size: 2em;
+
+        > li {
+            display: inline-block;
+            margin-bottom: 0;
+        }
+    }
+
     .photo-grid > li {
         padding-right: 2rem;
         width: 50%;

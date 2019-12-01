@@ -3,6 +3,9 @@ languageCode: 'en-us'
 title: 'TEDxKids@HartwoodElementary: See Things Differently'
 params:
     description: 'See things differently through the eyes of Hartwood Elementary students on May 31, 2019.'
+disableKinds:
+- taxonomy
+- taxonomyTerm
 sectionPagesMenu: main
 menu:
     main:
