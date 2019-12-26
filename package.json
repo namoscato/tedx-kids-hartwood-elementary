@@ -1,0 +1,25 @@
+{
+  "name": "tedx-kids-hartwood-elementary",
+  "version": "0.1.0",
+  "description": "TEDxKids@HartwoodElementary event site",
+  "scripts": {
+    "start": "parcel assets/js/main.ts --out-dir assets/dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/namoscato/tedx-kids-hartwood-elementary.git"
+  },
+  "author": "Nick Amoscato",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/namoscato/tedx-kids-hartwood-elementary/issues"
+  },
+  "homepage": "https://github.com/namoscato/tedx-kids-hartwood-elementary#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jquery": "^3.3.31",
+    "justified-layout": "^3.0.0",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.7.3"
+  }
+}
