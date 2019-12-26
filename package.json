@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "TEDxKids@HartwoodElementary event site",
   "scripts": {
+    "install": "parcel build assets/js/main.ts --no-source-maps --out-dir assets/dist",
     "start": "parcel assets/js/main.ts --out-dir assets/dist",
     "test": "tsc --noEmit && npx eslint --ext .ts assets/js --fix"
   },
