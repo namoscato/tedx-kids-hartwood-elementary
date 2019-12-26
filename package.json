@@ -1,0 +1,34 @@
+{
+  "name": "tedx-kids-hartwood-elementary",
+  "version": "0.1.0",
+  "description": "TEDxKids@HartwoodElementary event site",
+  "scripts": {
+    "install": "parcel build assets/js/main.ts --no-source-maps --out-dir assets/dist",
+    "start": "parcel assets/js/main.ts --out-dir assets/dist",
+    "test": "tsc --noEmit && npx eslint --ext .ts assets/js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/namoscato/tedx-kids-hartwood-elementary.git"
+  },
+  "author": "Nick Amoscato",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/namoscato/tedx-kids-hartwood-elementary/issues"
+  },
+  "homepage": "https://github.com/namoscato/tedx-kids-hartwood-elementary#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jquery": "^3.3.31",
+    "@typescript-eslint/eslint-plugin": "^2.13.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard-with-typescript": "^11.0.1",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^9.2.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "justified-layout": "^3.0.0",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.7.3"
+  }
+}

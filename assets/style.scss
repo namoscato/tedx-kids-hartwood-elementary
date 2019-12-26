@@ -65,6 +65,21 @@ h1, h2, h3 {
     }
 }
 
+#photos {
+    position: relative;
+    max-width: 50rem;
+
+    > a {
+        display: block;
+        margin-bottom: 10px;
+        position: absolute;
+
+        > img {
+            width: 100%;
+        }
+    }
+}
+
 #footer {
     background-color: #101010;
     color: #fff;
@@ -201,6 +216,13 @@ h1, h2, h3 {
 }
 
 @media (min-width: 34rem) {
+    .photo-grid > li {
+        padding-right: 2rem;
+        width: 50%;
+    }
+}
+
+@media (min-width: 40rem) {
     #menu {
         font-size: 2em;
 
@@ -210,13 +232,6 @@ h1, h2, h3 {
         }
     }
 
-    .photo-grid > li {
-        padding-right: 2rem;
-        width: 50%;
-    }
-}
-
-@media (min-width: 40rem) {
     .heading-title {
         font-size: 4em;
     }
@@ -230,6 +245,20 @@ h1, h2, h3 {
 @media (min-width: 50rem) {
     .heading-title {
         font-size: 5em;
+    }
+}
+
+@media (max-width: 56rem) {
+    #photos {
+        height: auto !important;
+
+        > a {
+            height: auto !important;
+            left: auto !important;
+            position: relative;
+            top: auto !important;
+            width: 100% !important;
+        }
     }
 }
 

@@ -56,5 +56,9 @@
         <p>This independent TEDx event is operated under license from TED.</p>
         <p class="copyright">&copy; 2019 TEDxKids@HartwoodElementary. Site by <a href="https://amoscato.com/" target="_blank">Nick Amoscato</a>.</p>
     </div>
+
+    <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+    {{ $js := resources.Get "dist/main.js" }}
+    <script src="{{ $js.Permalink }}"></script>
 </body>
 </html>
