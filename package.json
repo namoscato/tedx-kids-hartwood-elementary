@@ -5,7 +5,7 @@
   "scripts": {
     "install": "parcel build assets/js/main.ts --no-source-maps --out-dir assets/dist",
     "start": "parcel assets/js/main.ts --out-dir assets/dist",
-    "test": "tsc --noEmit && npx eslint --ext .ts assets/js --fix"
+    "test": "tsc --noEmit && npx eslint --ext .ts assets/js"
   },
   "repository": {
     "type": "git",
@@ -13,10 +13,7 @@
   },
   "author": "Nick Amoscato",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/namoscato/tedx-kids-hartwood-elementary/issues"
-  },
-  "homepage": "https://github.com/namoscato/tedx-kids-hartwood-elementary#readme",
+  "homepage": "https://www.tedxhartwoodelementary.com",
   "dependencies": {},
   "devDependencies": {
     "@types/jquery": "^3.3.31",
