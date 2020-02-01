@@ -1,5 +1,12 @@
 import justifiedLayout from 'justified-layout'
 
+interface Photo {
+    id: string
+    height_m: number
+    width_m: number
+    url_z: string
+}
+
 const $photos = $('#photos')
 const userId = '181924920@N03'
 
@@ -19,10 +26,10 @@ if ($photos.length > 0) {
 }
 
 function getStyle (box): string {
-    return ['height', 'left', 'top', 'width'].map((property) => `${property}:${box[property]}px`).join('; ')
+    return ['height', 'left', 'top', 'width'].map((property) => `${property}:${String(box[property])}px`).join('; ')
 }
 
-function renderPhotos (photos): void {
+function renderPhotos (photos: Photo[]): void {
     const layoutGeometry = justifiedLayout(
         photos.map(function (photo) {
             return {
@@ -39,7 +46,7 @@ function renderPhotos (photos): void {
     $photos.height(layoutGeometry.containerHeight)
 
     $photos.html(layoutGeometry.boxes.reduce(
-        function (html, box, index) {
+        function (html: string, box, index) {
             const photo = photos[index]
 
             return `${html}<a href="https://www.flickr.com/photos/${userId}/${photo.id}" style="${getStyle(box)}" target="_blank"><img src="${photo.url_z}"></a>`
