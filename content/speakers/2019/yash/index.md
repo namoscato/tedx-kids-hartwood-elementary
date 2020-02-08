@@ -1,6 +1,8 @@
 ---
 title: "Yash Tahiliani"
-sort_key: "Tahiliani, Yash"
+first_name: Yash
+last_name: Tahiliani
+events: [2019]
 youtube_id: "w9mqDzgm_iI"
 ---
 

@@ -1,65 +1,13 @@
+{{ define "title" }}
+{{ $title := printf "%s: %s" site.Title ($.Site.GetPage "/events/2020").Title }}
+<title>{{ $title }}</title>
+<meta property="og:title" content="{{ $title }}">
+{{ end }}
+
 {{ define "head" }}
-<meta name="description" content="{{ $.Site.Params.description }}">
-<meta property="og:type" content="website">
-<meta property="og:description" content="{{ $.Site.Params.description }}">
-<meta property="og:image" content="https://www.tedxhartwoodelementary.com/img/og-meta-image.jpg">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Event",
-  "name": "TEDxKids@HartwoodElementary: See Things Differently",
-  "startDate": "2019-05-31T19:00",
-  "endDate": "2019-05-31T20:00",
-  "location": {
-    "@type": "Place",
-    "name": "Dorseyville Middle School",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "3732 Saxonburg Blvd",
-      "addressLocality": "Pittsburgh",
-      "postalCode": "15238",
-      "addressRegion": "PA",
-      "addressCountry": "US"
-    }
-  },
-  "image": [
-    "https://www.tedxhartwoodelementary.com/img/google-event-1x1.jpg",
-    "https://www.tedxhartwoodelementary.com/img/google-event-4x3.jpg",
-    "https://www.tedxhartwoodelementary.com/img/google-event-16x9.jpg"
-   ],
-  "description": "See things differently through the eyes of Hartwood Elementary students on May 31, 2019."
-}
-</script>
+{{ partial "event/head.html" ($.Site.GetPage "/events/2020") }}
 {{ end }}
 
-{{ define "header" }}
-<div id="cover" class="content">
-    <div id="cover-image"></div>
-    <div id="cover-heading" class="heading">
-        <img id="cover-logo" alt="TEDxKids@HartwoodElementary Logo" src="/img/logo.jpg" width="100%">
-        <h1 class="heading-title">See Things Differently</h1>
-    </div>
-</div>
-<div class="content content-section is-red">
-    <h1 class="heading-title is-white is-submerged">See Things Differently</h1>
-    <h2 class="content-title">May 31, 2019</h2>
-    <h3 class="content-subtitle">Dorseyville Middle School</h3>
-    <h1 class="heading-title is-white">Speakers</h1>
-</div>
-{{ end }}
-
-{{ define "main" }}
-<div class="content content-section">
-    <h1 class="heading-title is-submerged">Speakers</h1>
-    {{ partial "speakers.html" . }}
-</div>
-<div class="content content-section is-red">
-    {{ partial "menu.html" . }}
-    <h1 class="heading-title is-white">What is <span class="text-transform-none">TEDx</span>?</h1>
-</div>
-<div class="content content-section">
-    <h1 class="heading-title is-submerged">What is <span class="text-transform-none">TEDx</span>?</h1>
-    <p>In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. Our event is called TEDxKids@HartwoodElementary, where x = independently organized TED event. At our TEDxKids@HartwoodElementary event, TED Talks video and live speakers will combine to spark deep discussion and connection in a small group. The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized.</p>
-</div>
+{{ define "body" }}
+{{ partial "event/body.html" ($.Site.GetPage "/events/2020") }}
 {{ end }}

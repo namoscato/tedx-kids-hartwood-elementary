@@ -1,6 +1,8 @@
 ---
 title: "Quinn Carey"
-sort_key: "Carey, Quinn"
+first_name: Quinn
+last_name: Carey
+events: [2019]
 youtube_id: "op5WrTWoB5c"
 ---
 

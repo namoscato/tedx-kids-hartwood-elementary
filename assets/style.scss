@@ -18,7 +18,8 @@ h1, h2, h3 {
 }
 
 #cover-image {
-    background: url('/img/cover-image.jpg') top / cover;
+    background-position: top;
+    background-size: cover;
     bottom: 10.25rem;
     position: absolute;
     top: 0;
@@ -183,8 +184,6 @@ h1, h2, h3 {
     font-size: 1.3em;
 }
 
-/* photo grid */
-
 .photo-grid {
     display: flex;
     flex-wrap: wrap;
@@ -206,13 +205,56 @@ h1, h2, h3 {
 .photo-grid-link {
     color: inherit;
     text-decoration: none;
+
+    > img {
+        height: auto;
+        margin-bottom: 0.5em;
+        max-width: none;
+        width: 100%;
+    }
 }
 
-.photo-grid-image {
+.speaker-image {
     display: block;
-    height: auto;
-    margin-bottom: 0.5em;
-    width: 100%;
+    max-width: 15rem;
+}
+
+.event-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+        margin-bottom: 3em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.event-list-figure {
+    color: inherit;
+    display: block;
+    font-size: 1.2em;
+    max-width: 50rem;
+    text-align: right;
+    text-decoration: none;
+
+    > img {
+        display: block;
+        margin-bottom: 1em;
+        width: 100%;
+    }
+
+    > h2 {
+        font-size: 1.5em;
+        font-weight: normal;
+    }
+
+    > p {
+        margin: .5em 0 0;
+    }
 }
 
 @media (min-width: 34rem) {
@@ -267,7 +309,7 @@ h1, h2, h3 {
         width: auto;
     }
 
-    .photo-grid-image {
+    .photo-grid-link > img {
         width: 15rem;
     }
 }

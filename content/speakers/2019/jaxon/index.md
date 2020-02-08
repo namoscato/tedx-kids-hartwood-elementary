@@ -1,6 +1,8 @@
 ---
 title: "Jaxon Branscum"
-sort_key: "Branscum, Jaxon"
+first_name: Jaxon
+last_name: Branscum
+events: [2019]
 youtube_id: "Ymfvwx2jZxc"
 ---
 

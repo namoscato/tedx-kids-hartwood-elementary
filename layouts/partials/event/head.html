@@ -1,0 +1,27 @@
+<meta name="description" content="{{ .Params.summary }}">
+<meta property="og:type" content="website">
+<meta property="og:description" content="{{ .Params.summary }}">
+<meta property="og:image" content="{{ (printf "%sog-meta-image.jpg" .Dir) | absURL }}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "{{ printf "%s: %s" $.Site.Title .Title }}",
+  "startDate": "{{ .Date.Format "2006-01-02T15:04-07:00" }}",
+  "location": {
+    "@type": "Place",
+    "name": "Dorseyville Middle School",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3732 Saxonburg Blvd",
+      "addressLocality": "Pittsburgh",
+      "postalCode": "15238",
+      "addressRegion": "PA",
+      "addressCountry": "US"
+    }
+  },
+  "image": {{ apply .Params.images "absURL" "." }},
+  "description": "{{ .Params.summary }}"
+}
+</script>

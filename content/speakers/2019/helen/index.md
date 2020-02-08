@@ -1,6 +1,8 @@
 ---
 title: "Helen (Heyi) Han"
-sort_key: "Han, Helen (Heyi)"
+first_name: Helen
+last_name: Han
+events: [2019]
 youtube_id: "kQLx9FkPokQ"
 ---
 

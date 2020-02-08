@@ -1,6 +1,8 @@
 ---
 title: "Sam Kieffer"
-sort_key: "Kieffer, Sam"
+first_name: Sam
+last_name: Kieffer
+events: [2019]
 youtube_id: "F5-l6UwFoQk"
 ---
 

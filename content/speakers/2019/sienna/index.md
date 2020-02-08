@@ -1,6 +1,8 @@
 ---
 title: "Sienna Mort"
-sort_key: "Mort, Sienna"
+first_name: Sienna
+last_name: Mort
+events: [2019]
 youtube_id: "yn5m_bxRWZo"
 ---
 

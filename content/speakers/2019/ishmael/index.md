@@ -1,6 +1,8 @@
 ---
 title: "Ishmael Conklin"
-sort_key: "Conklin, Ishmael"
+first_name: Ishmael
+last_name: Conklin
+events: [2019]
 youtube_id: "aajIL-iorCU"
 ---
 

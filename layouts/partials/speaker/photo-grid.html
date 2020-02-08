@@ -1,0 +1,10 @@
+<ul id="speakers" class="photo-grid">
+    {{ range . }}
+    <li>
+        <a class="photo-grid-link" href="{{ .Permalink }}">
+            {{ partial "speaker/image.html" . }}
+            {{ .Title }}
+        </a>
+    </li>
+    {{ end }}
+</ul>

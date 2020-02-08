@@ -1,6 +1,8 @@
 ---
 title: "Adele Grady"
-sort_key: "Grady, Adele"
+first_name: Adele
+last_name: Grady
+events: [2019]
 youtube_id: "QBrq0TLzdyA"
 ---
 

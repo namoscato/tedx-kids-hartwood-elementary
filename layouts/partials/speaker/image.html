@@ -1,0 +1,5 @@
+{{ $src := printf "%sprofile.jpg" .Dir }}
+{{ if not (fileExists $src) }}
+    {{ $src = "img/speaker-placeholder.jpg" }}
+{{ end }}
+<img alt="{{ .Title }}" class="speaker-image" src="{{ $src | relURL }}">

@@ -1,5 +1,19 @@
 {{ define "content" }}
-<img alt="{{ .Title }}" src="profile.jpg" width="240">
+{{ partial "speaker/image.html" . }}
+
 {{ .Content }}
+
+<p>
+    {{ .Params.first_name }}
+    {{ $events := "events" }}
+    {{ with $.Site.GetPage (printf "/%s/%s" $events (index (.Param $events) 0)) }}
+        {{ if ge .Date now }}is speaking{{ else }}spoke{{ end }} at
+        <a href="{{ .Permalink }}">&ldquo;{{ .Title }}&rdquo;</a>
+        on {{ .Date.Format "January 2, 2006" }}.
+    {{ end }}
+</p>
+
+{{ if .Params.youtube_id -}}
 <p><iframe width="100%" height="400" src="https://www.youtube.com/embed/{{ .Params.youtube_id }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+{{- end }}
 {{ end }}

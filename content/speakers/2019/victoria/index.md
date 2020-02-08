@@ -1,6 +1,8 @@
 ---
 title: "Victoria Macklin"
-sort_key: "Macklin, Victoria"
+first_name: Victoria
+last_name: Macklin
+events: [2019]
 youtube_id: "EKTthmAJcF4"
 ---
 
