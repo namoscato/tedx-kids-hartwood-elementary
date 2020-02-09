@@ -1,5 +1,8 @@
 {{ define "content" }}
-{{ partial "speaker/image.html" . }}
+{{ $src := printf "%sprofile.jpg" .Dir }}
+{{ if (fileExists $src) }}
+    <img alt="{{ .Title }}" class="speaker-image" src="{{ $src | relURL }}">
+{{ end }}
 
 {{ .Content }}
 
