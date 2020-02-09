@@ -1,6 +1,8 @@
 ---
 title: "Nadia Grady"
-sort_key: "Grady, Nadia"
+first_name: Nadia
+last_name: Grady
+events: [2019]
 youtube_id: "QBrq0TLzdyA"
 ---
 

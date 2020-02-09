@@ -1,6 +1,8 @@
 ---
 title: "Norah Kovach"
-sort_key: "Kovach, Norah"
+first_name: Norah
+last_name: Kovach
+events: [2019]
 youtube_id: "165jvu1LD-8"
 ---
 

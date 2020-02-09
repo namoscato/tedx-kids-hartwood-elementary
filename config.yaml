@@ -1,15 +1,13 @@
 baseURL: 'https://www.tedxhartwoodelementary.com/'
 languageCode: 'en-us'
-title: 'TEDxKids@HartwoodElementary: See Things Differently'
-params:
-    description: 'See things differently through the eyes of Hartwood Elementary students on May 31, 2019.'
+title: 'TEDxKids@HartwoodElementary'
 disableKinds:
-- taxonomy
-- taxonomyTerm
-sectionPagesMenu: main
+- RSS
 menu:
     main:
-        - identifier: speakers
-          name: Speakers
+        - identifier: events
+          name: Events
           weight: -100
-          url: /speakers/
+          url: /events/
+taxonomies:
+    event: events

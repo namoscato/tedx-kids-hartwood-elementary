@@ -1,6 +1,8 @@
 ---
 title: "Ashley Wingard"
-sort_key: "Wingard, Ashley"
+first_name: Ashley
+last_name: Wingard
+events: [2019]
 youtube_id: "0fwmh9svWpk"
 ---
 

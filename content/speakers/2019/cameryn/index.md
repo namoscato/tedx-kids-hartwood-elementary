@@ -1,6 +1,8 @@
 ---
 title: "Cameryn Brindza"
-sort_key: "Brindza, Cameryn"
+first_name: Cameryn
+last_name: Brindza
+events: [2019]
 youtube_id: "yn5m_bxRWZo"
 ---
 

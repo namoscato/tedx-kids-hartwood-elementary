@@ -3,9 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
+    {{ block "title" . }}
+    {{ $title := (printf "%s | %s" .Title site.Title) }}
+    <title>{{ $title }}</title>
+    <meta property="og:title" content="{{ $title }}">
+    {{ end }}
     <link rel="canonical" href="{{ .Permalink }}">
-    <meta property="og:title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ site.Title }}">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -29,17 +32,16 @@
     </script>
 </head>
 <body>
+    {{ block "body" . }}
     {{ block "header" . }}
     <div class="content content-section is-not-padded">
         <div class="heading">
             <a href="/">
                 <img id="cover-logo" alt="TEDxKids@HartwoodElementary Logo" src="/img/logo.jpg" width="100%">
             </a>
-            <h1 class="heading-title">See Things Differently</h1>
         </div>
     </div>
     <div class="content content-section is-red">
-        <h1 class="heading-title is-white is-submerged">See Things Differently</h1>
         {{ partial "menu.html" . }}
         <h1 class="heading-title is-white">{{ .Title }}</h1>
     </div>
@@ -52,9 +54,10 @@
         {{ end }}
     </div>
     {{ end }}
+    {{ end }}
     <div id="footer" class="content">
         <p>This independent TEDx event is operated under license from TED.</p>
-        <p class="copyright">&copy; 2019 TEDxKids@HartwoodElementary. Site by <a href="https://amoscato.com/" target="_blank">Nick Amoscato</a>.</p>
+        <p class="copyright">&copy; {{ now.Format "2006" }} TEDxKids@HartwoodElementary. Site by <a href="https://amoscato.com/" target="_blank">Nick Amoscato</a>.</p>
     </div>
 
     <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
