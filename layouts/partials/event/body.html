@@ -10,8 +10,8 @@
 <div class="content content-section is-red">
     <h1 class="heading-title is-white is-submerged">{{ .Title }}</h1>
     <h2 class="content-title">
-        {{ dateFormat "January 2, 2006" .Params.date_start }}
-        <span class="is-lowercase">{{ dateFormat "at 3PM" .Params.date_start }}</span>
+        {{ .Date.Format "January 2, 2006" }}
+        <span class="is-lowercase">{{ .Date.Format "at 3PM" }}</span>
     </h2>
     <h3 class="content-subtitle">
         <a href="https://goo.gl/maps/wdJptMCMYYerW4ZZA" target="_blank">Dorseyville Middle School</a>
