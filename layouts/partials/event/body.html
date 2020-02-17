@@ -9,7 +9,7 @@
 </div>
 <div class="content content-section is-red">
     <h1 class="heading-title is-white is-submerged">{{ .Title }}</h1>
-    <h2 class="content-title">{{ .Date.Format "January 2, 2006" }}</h2>
+    <h2 class="content-title">{{ dateFormat "January 2, 2006" .Params.date_start }}</h2>
     <h3 class="content-subtitle">Dorseyville Middle School</h3>
     <h1 class="heading-title is-white">Speakers</h1>
 </div>
