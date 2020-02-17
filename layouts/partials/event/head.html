@@ -8,7 +8,8 @@
   "@context": "https://schema.org",
   "@type": "Event",
   "name": "{{ printf "%s: %s" $.Site.Title .Title }}",
-  "startDate": "{{ .Date.Format "2006-01-02T15:04-07:00" }}",
+  "startDate": "{{ dateFormat "2006-01-02T15:04-07:00" .Params.date_start }}",
+  "endDate": "{{ dateFormat "2006-01-02T15:04-07:00" .Params.date_end }}",
   "location": {
     "@type": "Place",
     "name": "Dorseyville Middle School",
