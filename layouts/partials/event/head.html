@@ -5,24 +5,26 @@
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Event",
-  "name": "{{ printf "%s: %s" $.Site.Title .Title }}",
-  "startDate": "{{ .Date.Format "2006-01-02T15:04-07:00" }}",
-  "endDate": "{{ dateFormat "2006-01-02T15:04-07:00" .Params.date_end }}",
-  "location": {
-    "@type": "Place",
-    "name": "Dorseyville Middle School",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "3732 Saxonburg Blvd",
-      "addressLocality": "Pittsburgh",
-      "postalCode": "15238",
-      "addressRegion": "PA",
-      "addressCountry": "US"
-    }
-  },
-  "image": {{ apply .Params.images "absURL" "." }},
-  "description": "{{ .Params.summary }}"
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "{{ printf "%s: %s" $.Site.Title .Title }}",
+    "startDate": "{{ .Date.Format "2006-01-02T15:04-07:00" }}",
+    "endDate": "{{ dateFormat "2006-01-02T15:04-07:00" .Params.date_end }}",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+        "@type": "Place",
+        "name": "Dorseyville Middle School",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "3732 Saxonburg Blvd",
+            "addressLocality": "Pittsburgh",
+            "postalCode": "15238",
+            "addressRegion": "PA",
+            "addressCountry": "US"
+        }
+    },
+    "image": {{ apply .Params.images "absURL" "." }},
+    "description": "{{ .Params.summary }}"
 }
 </script>
