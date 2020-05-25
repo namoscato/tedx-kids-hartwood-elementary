@@ -9,18 +9,22 @@
 </div>
 <div class="content content-section is-red">
     <h1 class="heading-title is-white is-submerged">{{ .Title }}</h1>
-    <h2 class="content-title">
+    <h2 class="content-title{{ cond (isset .Params "is_postponed") " is-line-through" "" }}">
         {{ .Date.Format "January 2, 2006" }}
         <span class="is-lowercase">{{ .Date.Format "at 3PM" }}</span>
     </h2>
     <h3 class="content-subtitle">
+        {{- if .Params.is_postponed -}}
+        this event is postponed
+        {{- else -}}
         <a href="https://goo.gl/maps/wdJptMCMYYerW4ZZA" target="_blank">Dorseyville Middle School</a>
+        {{- end -}}
     </h3>
     <h1 class="heading-title is-white">Speakers</h1>
 </div>
 <div class="content content-section">
     <h1 class="heading-title is-submerged">Speakers</h1>
-    {{ partial "speaker/photo-grid.html" (.Data.Pages.ByParam "last_name") }}
+    {{ partial "speaker/photo-grid.html" (.Pages.ByParam "last_name") }}
 </div>
 <div class="content content-section is-red">
     {{ partial "menu.html" . }}
