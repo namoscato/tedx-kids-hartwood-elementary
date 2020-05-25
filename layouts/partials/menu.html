@@ -1,6 +1,6 @@
 <ul id="menu">
     {{ $currentPage := . }}
-    {{ range .Site.Menus.main.ByWeight }}
+    {{ range site.Menus.main }}
     <li class="{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}is-active{{ end }}">
         <a href="{{ .URL }}">{{ .Name }}</a>
     </li>

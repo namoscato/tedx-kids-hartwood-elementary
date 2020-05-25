@@ -7,11 +7,11 @@
 {
     "@context": "https://schema.org",
     "@type": "Event",
-    "name": "{{ printf "%s: %s" $.Site.Title .Title }}",
+    "name": "{{ printf "%s: %s" site.Title .Title }}",
     "startDate": "{{ .Date.Format "2006-01-02T15:04-07:00" }}",
     "endDate": "{{ dateFormat "2006-01-02T15:04-07:00" .Params.date_end }}",
     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-    "eventStatus": "https://schema.org/EventScheduled",
+    "eventStatus": "https://schema.org/{{ cond (isset .Params "is_postponed") "EventPostponed" "EventScheduled" }}",
     "location": {
         "@type": "Place",
         "name": "Dorseyville Middle School",
