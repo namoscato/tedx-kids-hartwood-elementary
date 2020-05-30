@@ -2,12 +2,16 @@ baseURL: 'https://www.tedxhartwoodelementary.com/'
 languageCode: 'en-us'
 title: 'TEDxKids@HartwoodElementary'
 disableKinds:
-- RSS
+  - RSS
 menu:
-    main:
-        - identifier: events
-          name: Events
-          weight: -100
-          url: /events/
+  main:
+    - identifier: events
+      name: Events
+      weight: -100
+      url: /events/
 taxonomies:
-    event: events
+  event: events
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
