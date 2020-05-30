@@ -24,7 +24,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "justified-layout": "^3.0.0",
+    "justified-layout": "^4.0.0",
     "parcel-bundler": "^1.12.4",
     "typescript": "^3.9.3"
   }
