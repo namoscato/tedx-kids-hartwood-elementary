@@ -1,7 +1,7 @@
 <meta name="description" content="{{ .Params.summary }}">
 <meta property="og:type" content="website">
 <meta property="og:description" content="{{ .Params.summary }}">
-<meta property="og:image" content="{{ (printf "%sog-meta-image.jpg" .Dir) | absURL }}">
+<meta property="og:image" content="{{ (printf "%sog-meta-image.jpg" .File.Dir) | absURL }}">
 
 <script type="application/ld+json">
 {
@@ -10,9 +10,13 @@
     "name": "{{ printf "%s: %s" site.Title .Title }}",
     "startDate": "{{ .Date.Format "2006-01-02T15:04-07:00" }}",
     "endDate": "{{ dateFormat "2006-01-02T15:04-07:00" .Params.date_end }}",
-    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-    "eventStatus": "https://schema.org/{{ cond (isset .Params "is_postponed") "EventPostponed" "EventScheduled" }}",
+    "eventAttendanceMode": "https://schema.org/{{ cond (isset .Params "virtual_link") "OnlineEventAttendanceMode" "OfflineEventAttendanceMode" }}",
+    "eventStatus": "https://schema.org/{{ .Params.event_status }}",
     "location": {
+        {{- with .Params.virtual_link }}
+        "@type": "VirtualLocation",
+        "url": "{{ . }}"
+        {{- else }}
         "@type": "Place",
         "name": "Dorseyville Middle School",
         "address": {
@@ -23,6 +27,7 @@
             "addressRegion": "PA",
             "addressCountry": "US"
         }
+        {{- end }}
     },
     "image": {{ apply .Params.images "absURL" "." }},
     "description": "{{ .Params.summary }}"

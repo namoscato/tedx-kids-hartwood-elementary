@@ -1,4 +1,4 @@
-{{ $src := printf "%sprofile.jpg" .Dir }}
+{{ $src := printf "%sprofile.jpg" .File.Dir }}
 {{ if not (fileExists $src) }}
     {{ $src = "img/speaker-placeholder.jpg" }}
 {{ end }}

@@ -2,6 +2,7 @@
 title: "See Things Differently"
 date: "2019-05-31T19:00:00-04:00"
 date_end: "2019-05-31T20:00:00-04:00"
+event_status: EventScheduled
 summary: See things differently through the eyes of Hartwood Elementary students on May 31, 2019.
 images:
 - google-event-1x1.jpg
