@@ -1,5 +1,5 @@
 {{ define "content" }}
-{{ $src := printf "%sprofile.jpg" .Dir }}
+{{ $src := printf "%sprofile.jpg" .File.Dir }}
 {{ if (fileExists $src) }}
     <img alt="{{ .Title }}" class="speaker-image" src="{{ $src | relURL }}">
 {{ end }}

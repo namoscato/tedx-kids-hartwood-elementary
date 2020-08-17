@@ -1,5 +1,5 @@
 <div id="cover" class="content">
-    <div id="cover-image" style="background-image: url('/{{ .Dir }}cover.jpg')"></div>
+    <div id="cover-image" style="background-image: url('/{{ .File.Dir }}cover.jpg')"></div>
     <div id="cover-heading" class="heading">
         <a href="/">
             <img id="cover-logo" alt="{{ site.Title }} Logo" src="/img/logo.jpg" width="100%">
@@ -14,7 +14,9 @@
         <span class="is-lowercase">{{ .Date.Format "at 3PM" }}</span>
     </h2>
     <h3 class="content-subtitle">
-        {{- if .Params.is_postponed -}}
+        {{- if .Params.virtual_link -}}
+        <a href="{{ .Params.virtual_link }}" target="_blank">join <u>Zoom Meeting</u></a>
+        {{- else if .Params.is_postponed -}}
         this event is postponed
         {{- else -}}
         <a href="https://goo.gl/maps/wdJptMCMYYerW4ZZA" target="_blank">Dorseyville Middle School</a>

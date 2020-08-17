@@ -3,7 +3,7 @@
     {{ range .Pages }}
     <li>
         <a class="event-list-figure" href="{{ .Permalink }}">
-            <img src="/{{ .Dir }}cover.jpg">
+            <img src="/{{ .File.Dir }}cover.jpg">
             <h2>{{ .Title }}</h2>
             <p>{{ .Date.Format "January 2, 2006" }}</p>
         </a>
