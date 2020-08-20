@@ -12,6 +12,9 @@
     "endDate": "{{ dateFormat "2006-01-02T15:04-07:00" .Params.date_end }}",
     "eventAttendanceMode": "https://schema.org/{{ cond (isset .Params "virtual_link") "OnlineEventAttendanceMode" "OfflineEventAttendanceMode" }}",
     "eventStatus": "https://schema.org/{{ .Params.event_status }}",
+    {{- with .Params.date_previous_start }}
+    "previousStartDate": "{{ dateFormat "2006-01-02T15:04-07:00" . }}",
+    {{- end }}
     "location": {
         {{- with .Params.virtual_link }}
         "@type": "VirtualLocation",

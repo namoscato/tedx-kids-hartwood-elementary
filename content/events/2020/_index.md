@@ -1,9 +1,10 @@
 ---
 title: "Think And Be Free"
 publishdate: "2020-05-25T00:00:00-04:00"
-lastmod: "2020-08-16T22:00:00-04:00"
+lastmod: "2020-08-19T22:00:00-04:00"
 date: "2020-08-28T19:10:00-04:00"
 date_end: "2020-08-28T20:15:00-04:00"
+date_previous_start: "2020-05-29T19:00:00-04:00"
 event_status: EventRescheduled
 virtual_link: https://us02web.zoom.us/j/3432449686
 summary: Hartwood Elementary students demonstrate their ability to think and be free on August 28, 2020.
