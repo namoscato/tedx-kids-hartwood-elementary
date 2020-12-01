@@ -26,6 +26,6 @@
     "eslint-plugin-standard": "^4.0.2",
     "justified-layout": "^4.0.0",
     "parcel-bundler": "^1.12.4",
-    "typescript": "^4.0.5"
+    "typescript": "^4.1.2"
   }
 }
