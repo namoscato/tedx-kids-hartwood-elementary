@@ -11,7 +11,7 @@
     {{ $events := "events" }}
     {{ with $.Site.GetPage (printf "/%s/%s" $events (index (.Param $events) 0)) }}
         {{ if ge .Date now }}is speaking{{ else }}spoke{{ end }} at
-        <a href="{{ .Permalink }}">&ldquo;{{ .Title }}&rdquo;</a>
+        <a href="{{ .RelPermalink }}">&ldquo;{{ .Title }}&rdquo;</a>
         on {{ .Date.Format "January 2, 2006" }}.
     {{ end }}
 </p>

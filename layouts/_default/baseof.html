@@ -21,7 +21,7 @@
     {{ block "head" . }}{{ end }}
 
     {{ $style := resources.Get "style.scss" | resources.ToCSS (dict "targetPath" "style.css" "outputStyle" "compressed") }}
-    <link href="{{ $style.Permalink }}" rel="stylesheet">
+    <link href="{{ $style.RelPermalink }}" rel="stylesheet">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17188743-26"></script>
     <script>
@@ -62,6 +62,6 @@
 
     <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
     {{ $js := resources.Get "dist/main.js" }}
-    <script src="{{ $js.Permalink }}"></script>
+    <script src="{{ $js.RelPermalink }}"></script>
 </body>
 </html>

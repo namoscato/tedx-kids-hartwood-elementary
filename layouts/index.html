@@ -1,13 +1,13 @@
 {{ define "title" }}
-{{ $title := printf "%s: %s" site.Title ($.Site.GetPage "/events/2020").Title }}
+{{ $title := printf "%s: %s" site.Title ($.Site.GetPage "/events/2022").Title }}
 <title>{{ $title }}</title>
 <meta property="og:title" content="{{ $title }}">
 {{ end }}
 
 {{ define "head" }}
-{{ partial "event/head.html" ($.Site.GetPage "/events/2020") }}
+{{ partial "event/head.html" ($.Site.GetPage "/events/2022") }}
 {{ end }}
 
 {{ define "body" }}
-{{ partial "event/body.html" ($.Site.GetPage "/events/2020") }}
+{{ partial "event/body.html" ($.Site.GetPage "/events/2022") }}
 {{ end }}
