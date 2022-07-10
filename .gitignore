@@ -1,6 +1,7 @@
 .DS_Store
 
 # Generated files by hugo
+/.cache/
 /public/
 /resources/_gen/
 /assets/jsconfig.json

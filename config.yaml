@@ -1,6 +1,7 @@
-baseURL: 'https://www.tedxhartwoodelementary.com/'
-languageCode: 'en-us'
-title: 'TEDxKids@HartwoodElementary'
+baseURL: "https://www.tedxhartwoodelementary.com/"
+languageCode: "en-us"
+title: "TEDxKids@HartwoodElementary"
+googleAnalytics: G-9CG7Y41PSS
 disableKinds:
   - RSS
 menu:

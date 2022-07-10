@@ -23,13 +23,7 @@
     {{ $style := resources.Get "style.scss" | resources.ToCSS (dict "targetPath" "style.css" "outputStyle" "compressed") }}
     <link href="{{ $style.RelPermalink }}" rel="stylesheet">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17188743-26"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-17188743-26');
-    </script>
+    {{ template "_internal/google_analytics.html" . }}
 </head>
 <body>
     {{ block "body" . }}
