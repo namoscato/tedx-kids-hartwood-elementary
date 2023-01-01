@@ -1,11 +1,5 @@
 import justifiedLayout from 'justified-layout'
-
-interface Photo {
-    id: string
-    height_m: number
-    width_m: number
-    url_z: string
-}
+import { LayoutBox, Photo } from './types'
 
 const $photos = $('#photos')
 const userId = '181924920@N03'
@@ -25,8 +19,10 @@ if ($photos.length > 0) {
     })
 }
 
-function getStyle (box): string {
-    return ['height', 'left', 'top', 'width'].map((property) => `${property}:${String(box[property])}px`).join('; ')
+function getStyle (box: LayoutBox): string {
+    const properties = ['height', 'left', 'top', 'width'] as const
+
+    return properties.map((property) => `${property}:${String(box[property])}px`).join('; ')
 }
 
 function renderPhotos (photos: Photo[]): void {

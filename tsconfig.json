@@ -1,3 +1,7 @@
 {
-  "include": ["assets/js/**/*"]
+  "include": ["assets/js/**/*"],
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+  }
 }
